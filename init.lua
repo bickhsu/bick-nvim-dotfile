@@ -32,13 +32,20 @@ require("config.options")
 -- Setup lazy.nvim
 ------------------------------------------------------------
 require("lazy").setup({
-  spec = {
-    -- import your plugins
-    { import = "plugins" },
-  },
-  -- Configure any other settings here. See the documentation for more details.
-  -- colorscheme that will be used when installing plugins.
-  install = { colorscheme = { "habamax" } },
-  -- automatically check for plugin updates
-  checker = { enabled = true },
+    {
+        "scottmckendry/cyberdream.nvim",
+        lazy = false,
+        priority = 1000,
+        config = function()
+            vim.cmd.colorscheme("cyberdream")
+        end,
+    },
+    {
+        "nvim-tree/nvim-tree.lua",
+        dependencies = { "nvim-tree/nvim-web-devicons" },
+        opts = {},
+    },
+    
+    require("plugins.treesitter"),
+    checker = { enabled = true },
 })

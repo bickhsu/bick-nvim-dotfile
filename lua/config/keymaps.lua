@@ -13,6 +13,8 @@ set("n", "<leader>e", "<Cmd>NvimTreeToggle<CR>", { desc = "Toggle Tree View" })
 set("n", "<leader>s", "<Cmd>split<CR>", { desc = "Split Windows" }) 
 set("n", "<leader>t", "<Cmd>terminal<CR>", { desc = "Terminal" }) 
 set("n", "<Esc>", "<Cmd>nohlsearch<CR>", { desc = "按esc清除highlight" })
+set("t", "<Esc>", [[<C-\><C-n>]], { desc = "Exit Terminal Mode" })
+
 set("n", "<leader>q", "<Cmd>q<CR>", { desc = "Quit" })
 
 -- Arrow Switch Panel

@@ -1,5 +1,8 @@
 {
+  "cyberdream.nvim": { "branch": "main", "commit": "eba11f590026e74915e13d12a53cdbdc9b98d9f9" },
   "lazy.nvim": { "branch": "main", "commit": "6c3bda4aca61a13a9c63f1c1d1b16b9d3be90d7a" },
   "nvim-tree.lua": { "branch": "master", "commit": "87d096a39cb2d5d43e6771563575ff042a79f48b" },
-  "nvim-web-devicons": { "branch": "master", "commit": "b8221e42cf7287c4dcde81f232f58d7b947c210d" }
+  "nvim-treesitter": { "branch": "master", "commit": "42fc28ba918343ebfd5565147a42a26580579482" },
+  "nvim-web-devicons": { "branch": "master", "commit": "b8221e42cf7287c4dcde81f232f58d7b947c210d" },
+  "playground": { "branch": "master", "commit": "ba48c6a62a280eefb7c85725b0915e021a1a0749" }
 }
