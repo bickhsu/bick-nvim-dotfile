@@ -33,19 +33,11 @@ require("config.options")
 ------------------------------------------------------------
 require("lazy").setup({
     {
-        "scottmckendry/cyberdream.nvim",
-        lazy = false,
-        priority = 1000,
-        config = function()
-            vim.cmd.colorscheme("cyberdream")
-        end,
-    },
-    {
         "nvim-tree/nvim-tree.lua",
         dependencies = { "nvim-tree/nvim-web-devicons" },
         opts = {},
     },
-    
+    require("plugins.cyberdream"),    
     require("plugins.treesitter"),
     checker = { enabled = true },
 })
