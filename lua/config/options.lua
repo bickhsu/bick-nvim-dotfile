@@ -16,6 +16,13 @@ vim.opt.shiftwidth = indent    -- 自動縮排寬度 = 2
 vim.opt.smartindent = true     -- 智能縮排（根據語法自動縮排）
 vim.opt.softtabstop = indent   -- 按 <Tab> / <BS> 的時候算 2 空格
 vim.opt.tabstop = indent       -- Tab 寬度 = 2 空格
+vim.opt.list = false
+-- 設定要顯示哪些符號
+vim.opt.listchars = {
+  space = "·",     -- 空格顯示為 ·
+  tab = "» ",      -- Tab 顯示為 » 後面帶一個空格
+}
+-- vim.opt.cursorline = true
 
 -- Search
 vim.opt.grepprg = "rg --vimgrep"  -- 用 ripgrep 當 grep 工具
