@@ -40,5 +40,6 @@ require("lazy").setup({
     require("plugins.cyberdream"),    
     require("plugins.treesitter"),
     require("plugins.indent_blankline"),
+    require("plugins.lualine"),
     checker = { enabled = true },
 })

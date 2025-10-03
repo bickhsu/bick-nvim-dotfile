@@ -11,7 +11,7 @@ return {
                 Comment = { fg = "#696969", bg = "NONE", italic = true },
                 LineNr = { fg = "#d48e9e" },
                 CursorLineNr = { fg = "#a6858b", bold = true },
-                Whitespace = { fg = "#a6858b", bg = "NONE" },
+                Whitespace = { fg = "#1a1a1a" },
             },
 
         })

@@ -22,7 +22,9 @@ vim.opt.listchars = {
   space = "·",     -- 空格顯示為 ·
   tab = "» ",      -- Tab 顯示為 » 後面帶一個空格
 }
--- vim.opt.cursorline = true
+
+vim.opt.equalalways = false
+
 
 -- Search
 vim.opt.grepprg = "rg --vimgrep"  -- 用 ripgrep 當 grep 工具
