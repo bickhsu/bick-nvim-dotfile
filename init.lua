@@ -32,14 +32,10 @@ require("config.options")
 -- Setup lazy.nvim
 ------------------------------------------------------------
 require("lazy").setup({
-    {
-        "nvim-tree/nvim-tree.lua",
-        dependencies = { "nvim-tree/nvim-web-devicons" },
-        opts = {},
-    },
+    require("plugins.tree"),    
     require("plugins.cyberdream"),    
     require("plugins.treesitter"),
     require("plugins.indent_blankline"),
-    require("plugins.lualine"),
+    require("plugins.heirline"),
     checker = { enabled = true },
 })

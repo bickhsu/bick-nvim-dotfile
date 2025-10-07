@@ -41,3 +41,11 @@ vim.opt.hidden = true              -- 允許 buffer 切換時不存檔
 vim.opt.undofile = true            -- 啟用永久 undo（跨重啟保留編輯歷史）
 vim.opt.updatetime = 1000          -- CursorHold / 更新觸發時間 (1s)
 
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "lua", "yaml" },
+  callback = function()
+    vim.bo.shiftwidth = 2
+    vim.bo.tabstop = 2
+    vim.bo.expandtab = true
+  end,
+})
