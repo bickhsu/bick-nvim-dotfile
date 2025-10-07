@@ -36,3 +36,29 @@ set("n", "<C-v>", '"+p')
 set("i", "<C-v>", '<Esc>"+pa')
 set("c", "<C-v>", "<C-r>+")
 
+-- 讓左右鍵在 Insert 模式中可一次跳過整個 tab 空格
+vim.keymap.set("i", "<Right>", function()
+  local col = vim.fn.col(".")
+  local line = vim.fn.getline(".")
+  local ts = vim.bo.tabstop
+
+  -- 如果右邊是空格群，就跳過整個 tab 寬度
+  if line:sub(col, col + ts - 2):match("^%s+$") then
+    vim.cmd("normal! " .. ts .. "l")
+  else
+    vim.cmd("normal! l")
+  end
+end, { noremap = true, silent = true })
+
+vim.keymap.set("i", "<Left>", function()
+  local col = vim.fn.col(".")
+  local line = vim.fn.getline(".")
+  local ts = vim.bo.tabstop
+
+  -- 如果左邊是空格群，就跳過整個 tab 寬度
+  if col > ts and line:sub(col - ts - 1, col - 2):match("^%s+$") then
+    vim.cmd("normal! " .. ts .. "h")
+  else
+    vim.cmd("normal! h")
+  end
+end, { noremap = true, silent = true })

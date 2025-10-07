@@ -2,29 +2,22 @@ return {
     "lukas-reineke/indent-blankline.nvim",
     main = "ibl",
     config = function()
-        local highlight = {
-            "RainbowRed",
-            "RainbowYellow",
-            "RainbowBlue",
-            "RainbowOrange",
-            "RainbowGreen",
-            "RainbowViolet",
-            "RainbowCyan",
-        }
+        -- 設定線條顏色與高亮顏色
+        vim.api.nvim_set_hl(0, "IndentBlanklineChar", { fg = "#d48e9e", nocombine = true })
+        vim.api.nvim_set_hl(0, "IndentBlanklineContextChar", { fg = "#acf76a", nocombine = true })
 
-        local hooks = require "ibl.hooks"
-        hooks.register(hooks.type.HIGHLIGHT_SETUP, function()
-            vim.api.nvim_set_hl(0, "RainbowRed", { fg = "#E06C75" })
-            vim.api.nvim_set_hl(0, "RainbowYellow", { fg = "#E5C07B" })
-            vim.api.nvim_set_hl(0, "RainbowBlue", { fg = "#61AFEF" })
-            vim.api.nvim_set_hl(0, "RainbowOrange", { fg = "#D19A66" })
-            vim.api.nvim_set_hl(0, "RainbowGreen", { fg = "#98C379" })
-            vim.api.nvim_set_hl(0, "RainbowViolet", { fg = "#C678DD" })
-            vim.api.nvim_set_hl(0, "RainbowCyan", { fg = "#56B6C2" })
-        end)
-
-        require("ibl").setup {
-            indent = { highlight = highlight },
-        }
+        require("ibl").setup({
+            indent = {
+                char = "▏", -- 最細線條，可改 "┊" 試試看哪個你更喜歡
+                highlight = { "IndentBlanklineChar" },
+            },
+            scope = {
+                enabled = true,               -- 開啟當前縮排層高亮
+                highlight = { "IndentBlanklineContextChar" },
+                show_start = false,
+                show_end = false,
+            },
+        })
     end,
 }
+
