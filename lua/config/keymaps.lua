@@ -36,4 +36,6 @@ set("n", "<C-v>", '"+p')
 set("i", "<C-v>", '<Esc>"+pa')
 set("c", "<C-v>", "<C-r>+")
 
-
+-- Visual 模式下用 Tab / Shift-Tab 控制縮排
+vim.keymap.set("v", "<Tab>", ">gv", { desc = "Indent right" })
+vim.keymap.set("v", "<S-Tab>", "<gv", { desc = "Indent left" })

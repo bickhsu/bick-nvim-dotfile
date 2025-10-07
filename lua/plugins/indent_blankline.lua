@@ -3,7 +3,7 @@ return {
     main = "ibl",
     config = function()
         -- 設定線條顏色與高亮顏色
-        vim.api.nvim_set_hl(0, "IndentBlanklineChar", { fg = "#d48e9e", nocombine = true })
+        vim.api.nvim_set_hl(0, "IndentBlanklineChar", { fg = "#7a5d72", nocombine = true })
         vim.api.nvim_set_hl(0, "IndentBlanklineContextChar", { fg = "#acf76a", nocombine = true })
 
         require("ibl").setup({
