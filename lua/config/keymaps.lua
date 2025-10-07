@@ -11,7 +11,7 @@ local set = vim.keymap.set
 set("n", "<leader>p", "<Cmd>Lazy<CR>", { desc = "Plugin Manager Window" })
 set("n", "<leader>e", "<Cmd>NvimTreeToggle<CR>", { desc = "Toggle Tree View" })
 set("n", "<leader>s", "<Cmd>split<CR>", { desc = "Split Windows" }) 
-set("n", "<leader>t", "<Cmd>terminal<CR>", { desc = "Terminal" }) 
+set("n", "<leader>t", "<Cmd>split<CR><Cmd>terminal<CR>", { desc = "Terminal" }) 
 set("n", "<Esc>", "<Cmd>nohlsearch<CR>", { desc = "按esc清除highlight" })
 set("t", "<Esc>", [[<C-\><C-n>]], { desc = "Exit Terminal Mode" })
 

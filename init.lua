@@ -37,5 +37,6 @@ require("lazy").setup({
     require("plugins.treesitter"),
     require("plugins.indent_blankline"),
     require("plugins.heirline"),
+    require("plugins.lualine"),
     checker = { enabled = true },
 })
