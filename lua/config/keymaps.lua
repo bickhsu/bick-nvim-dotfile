@@ -12,8 +12,8 @@ set("n", "<leader>p", "<Cmd>Lazy<CR>", { desc = "Plugin Manager Window" })
 set("n", "<leader>e", "<Cmd>NvimTreeToggle<CR>", { desc = "Toggle Tree View" })
 set("n", "<leader>s", "<Cmd>split<CR>", { desc = "Split Windows" }) 
 set("n", "<leader>t", "<Cmd>split<CR><Cmd>terminal<CR>", { desc = "Terminal" }) 
-set("n", "<Esc>", "<Cmd>nohlsearch<CR>", { desc = "按esc清除highlight" })
 set("t", "<Esc>", [[<C-\><C-n>]], { desc = "Exit Terminal Mode" })
+set("n", "<Esc>", "<Cmd>nohlsearch<CR>", { desc = "按esc清除highlight" })
 
 set("n", "<leader>q", "<Cmd>q<CR>", { desc = "Quit" })
 
@@ -40,11 +40,4 @@ set("c", "<C-v>", "<C-r>+")
 vim.keymap.set("v", "<Tab>", ">gv", { desc = "Indent right" })
 vim.keymap.set("v", "<S-Tab>", "<gv", { desc = "Indent left" })
 
--- -- 一行滾動（Ctrl + ↑ / ↓）
--- vim.keymap.set("n", "<C-Up>", "<C-y>", { noremap = true, silent = true, desc = "Scroll up one line" })
--- vim.keymap.set("n", "<C-Down>", "<C-e>", { noremap = true, silent = true, desc = "Scroll down one line" })
---
--- -- 半頁滾動（Shift + ↑ / ↓）
--- vim.keymap.set("n", "<S-Up>", "<C-u>", { noremap = true, silent = true, desc = "Scroll up half page" })
--- vim.keymap.set("n", "<S-Down>", "<C-d>", { noremap = true, silent = true, desc = "Scroll down half page" })
 
