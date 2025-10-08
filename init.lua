@@ -38,5 +38,6 @@ require("lazy").setup({
     require("plugins.indent_blankline"),
     require("plugins.heirline"),
     require("plugins.lualine"),
+    require("plugins.comment"),
     checker = { enabled = true },
 })
