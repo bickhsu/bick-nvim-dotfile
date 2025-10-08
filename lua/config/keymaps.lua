@@ -39,3 +39,12 @@ set("c", "<C-v>", "<C-r>+")
 -- Visual 模式下用 Tab / Shift-Tab 控制縮排
 vim.keymap.set("v", "<Tab>", ">gv", { desc = "Indent right" })
 vim.keymap.set("v", "<S-Tab>", "<gv", { desc = "Indent left" })
+
+-- -- 一行滾動（Ctrl + ↑ / ↓）
+-- vim.keymap.set("n", "<C-Up>", "<C-y>", { noremap = true, silent = true, desc = "Scroll up one line" })
+-- vim.keymap.set("n", "<C-Down>", "<C-e>", { noremap = true, silent = true, desc = "Scroll down one line" })
+--
+-- -- 半頁滾動（Shift + ↑ / ↓）
+-- vim.keymap.set("n", "<S-Up>", "<C-u>", { noremap = true, silent = true, desc = "Scroll up half page" })
+-- vim.keymap.set("n", "<S-Down>", "<C-d>", { noremap = true, silent = true, desc = "Scroll down half page" })
+

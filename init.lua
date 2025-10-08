@@ -39,5 +39,6 @@ require("lazy").setup({
     require("plugins.heirline"),
     require("plugins.lualine"),
     require("plugins.comment"),
+    require("plugins.neoscroll"),
     checker = { enabled = true },
 })
