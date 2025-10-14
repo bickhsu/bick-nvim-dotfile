@@ -6,16 +6,24 @@ return {
     require("lualine").setup({
       options = {
         icons_enabled = true,
-        theme = "auto",          -- 自動依顏色方案調整
-        globalstatus = true,     -- 全域狀態列 (對應 :set laststatus=3)
-        section_separators = { left = "", right = "" },
-        component_separators = { left = "", right = "" },
+        theme = "horizon",
+        globalstatus = true,     -- :set laststatus=3
+        section_separators = { left = "", right = "" },
+        component_separators = { left = "", right = "" },
       },
       sections = {
         lualine_a = { "mode" },
         lualine_b = { "branch", "diff", "diagnostics" },
-        lualine_c = { { "filename", path = 1 } }, -- path=1 表示顯示相對路徑
-        lualine_x = { "encoding", "fileformat", "filetype" },
+        lualine_c = { 
+          { function() return "👽👽👽" end },
+          { "filename", path = 1 },
+        },
+        lualine_x = {
+          require("codex").status(),
+          "encoding",
+          "fileformat",
+          "filetype",
+        },
         lualine_y = { "progress" },
         lualine_z = { "location" },
       },
