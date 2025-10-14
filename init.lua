@@ -42,5 +42,6 @@ require("lazy").setup({
     require("plugins.neoscroll"),
     require("plugins.codesnap"),
     require("plugins.codex"),
+    require("plugins.tetris"),
     checker = { enabled = true },
 })
