@@ -41,5 +41,6 @@ require("lazy").setup({
     require("plugins.comment"),
     require("plugins.neoscroll"),
     require("plugins.codesnap"),
+    require("plugins.codex"),
     checker = { enabled = true },
 })
