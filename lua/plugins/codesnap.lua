@@ -18,7 +18,8 @@ return {
     bg_theme = "grape",     
     code_font_family = "CaskaydiaCove Nerd Font", 
     watermark = "BICK",
-    bg_x_padding = 50,
-    bg_y_padding = 40,
+    bg_x_padding = 20,
+    bg_y_padding = 20,
+    bg_color = "#8a8091",
   },
 }
