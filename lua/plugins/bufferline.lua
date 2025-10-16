@@ -1,4 +1,3 @@
-
 return {
   "akinsho/bufferline.nvim",
   version = "*",
@@ -9,8 +8,8 @@ return {
 
     require("bufferline").setup({
       options = {
-        mode = "buffers", 
-        style_preset = require("bufferline").style_preset.minimal, 
+        mode = "buffers",
+        style_preset = require("bufferline").style_preset.minimal,
         themable = true,
 
         diagnostics = "nvim_lsp",
@@ -36,6 +35,21 @@ return {
         close_command = function(n)
           require("bufferline").cycle(-1)
           vim.cmd("bdelete! " .. n)
+        end,
+
+        -- 🚫 過濾規則
+        custom_filter = function(buf_number, buf_numbers)
+          local name = vim.fn.bufname(buf_number)
+          local filetype = vim.bo[buf_number].filetype
+
+          if name:match("cmd.exe") then
+            return false
+          end
+          if filetype == "terminal" then
+            return false
+          end
+
+          return true
         end,
       },
     })
